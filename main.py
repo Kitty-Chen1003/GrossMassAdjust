@@ -282,9 +282,17 @@ class GrossmassAdjustTool(QWidget):
             QMessageBox.critical(self, "Error", f"Failed to save file:\n{e}")
 
 
+def resource_path(relative):
+    """获取打包后文件的真实路径"""
+    if hasattr(sys, '_MEIPASS'):
+        return os.path.join(sys._MEIPASS, relative)
+    return os.path.join(os.path.abspath("."), relative)
+
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    with open("style.qss", "r") as f:
+    qss_path = resource_path("style.qss")
+    with open(qss_path, "r", encoding="utf-8") as f:
         app.setStyleSheet(f.read())
     ui = GrossmassAdjustTool()
     ui.show()
