@@ -1,0 +1,71 @@
+QPushButton#confirmbutton{
+    font-family: "Microsoft YaHei";
+    font-size: 12pt;
+    min-width: 80px;
+    padding: 10px;
+    border: 2px solid #3498db;
+    border-radius: 15px;
+    color: #ecf0f1;
+    background: #2980b9;
+}
+
+QPushButton#confirmbutton:hover {
+background: #3498db;
+}
+
+QPushButton#cancelButton {
+    font-family: "Microsoft YaHei";
+    font-size: 12pt;
+    min-width: 80px;
+    padding: 10px;
+    border: 2px solid #e74c3c;
+    border-radius: 15px;
+    color: #ecf0f1;
+    background: #c0392b;
+}
+
+QPushButton#cancelButton:hover {
+    background: #e74c3c;
+}
+
+QPushButton#companyButton {
+    font-family: "Microsoft YaHei";
+    font-size: 12pt;
+    min-width: 80px;
+    padding: 10px;
+    border: 2px solid #7f8c8d;
+    border-radius: 15px;
+    color: #ecf0f1;
+    background: #95a5a6;
+}
+
+QPushButton#companyButton:hover {
+    background: #7f8c8d;
+}
+
+QLineEdit {
+    font-family: "Microsoft YaHei";
+    padding: 5px;
+    border: 1px solid #bdc3c7;
+    border-radius: 3px;
+    selection-background-color: #3498db;
+}
+QLineEdit:focus {
+    border: 1px solid #3498db;
+    background: #ecf0f1;
+}
+
+QLabel#normal{
+    font-size: 12pt;
+    font-family: "Microsoft YaHei";
+    background: transparent;
+}
+
+QLabel#title{
+    font-size: 14pt;
+    font-family: "Microsoft YaHei";
+    padding: 5px;
+    background: transparent;
+    font-weight: bold;
+
+}
