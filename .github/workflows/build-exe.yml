@@ -1,9 +1,7 @@
-name: Build Windows EXE
+name: Build EXE
 
 on:
   workflow_dispatch:
-  push:
-    branches: [ main ] 
 
 jobs:
   build:
@@ -26,15 +24,15 @@ jobs:
       - name: Build EXE
         shell: cmd
         run: |
-          pyinstaller `
-            --onefile `
-            --windowed `
-            --name "GrossMassTool"
-            --add-data "style.qss;." `
+          pyinstaller ^
+            --onefile ^
+            --windowed ^
+            --add-data "style.qss;." ^
+            --name GrossmassTool ^
             main.py
 
       - name: Upload EXE
         uses: actions/upload-artifact@v4
         with:
-          name: GrossmassTool-exe
+          name: GrossmassTool
           path: dist/
